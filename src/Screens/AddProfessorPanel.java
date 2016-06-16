@@ -22,7 +22,7 @@ public class AddProfessorPanel  extends JPanel {
 	public AddProfessorPanel(final JFrame currentGUIFrame) {
 		setLayout(null);		
 		JLabel lblNewLabel = new JLabel("Welcome User");
-		lblNewLabel.setBounds(325, 10, 100, 20);
+		lblNewLabel.setBounds(425, 10, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		logout = new JButton("Logout");
 		logout.addActionListener(new ActionListener() {
@@ -32,10 +32,10 @@ public class AddProfessorPanel  extends JPanel {
 				currentGUIFrame.getContentPane().repaint();	
 			}
 		});
-		logout.setBounds(425, 7, 75, 30);
+		logout.setBounds(525, 7, 75, 30);
 		currentGUIFrame.add(logout);
 		lblNewLabel = new JLabel("Add New Professor");
-		lblNewLabel.setBounds(200, 90, 200, 20);
+		lblNewLabel.setBounds(250, 90, 200, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
 		professors = new JButton("Professors");
@@ -116,29 +116,70 @@ public class AddProfessorPanel  extends JPanel {
 		reports.setBounds(520, 55, 85, 30);
 		currentGUIFrame.add(reports);
 		
-		lblNewLabel = new JLabel("Professor Name *");
+		lblNewLabel = new JLabel("First Name");
 		lblNewLabel.setBounds(100, 120, 110, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
 		JTextField textField = new JTextField();
 		textField.setBounds(250, 118, 175, 25);
-		currentGUIFrame.add(textField);	
+		currentGUIFrame.add(textField);
 		
-		lblNewLabel = new JLabel("Subject *");
-		lblNewLabel.setBounds(100, 150, 100, 20);
+		lblNewLabel = new JLabel("Last Name");
+		lblNewLabel.setBounds(100, 150, 110, 20);
+		currentGUIFrame.add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setBounds(250, 148, 175, 25);
+		currentGUIFrame.add(textField);
+		
+		lblNewLabel = new JLabel("Grad School");
+		lblNewLabel.setBounds(100, 180, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
 		JTextField subject= new JTextField();
-		subject.setBounds(250, 148, 175, 25);		
+		subject.setBounds(250, 178, 175, 25);		
 		currentGUIFrame.add(subject);
 		
-		lblNewLabel = new JLabel("Day *");
-		lblNewLabel.setBounds(100, 180, 100, 20);
+		lblNewLabel = new JLabel("Degree");
+		lblNewLabel.setBounds(100, 210, 100, 20);
+		currentGUIFrame.add(lblNewLabel);
+		
+		subject= new JTextField();
+		subject.setBounds(250, 208, 175, 25);		
+		currentGUIFrame.add(subject);
+		
+		lblNewLabel = new JLabel("Subject");
+		lblNewLabel.setBounds(100, 240, 100, 20);
+		currentGUIFrame.add(lblNewLabel);
+		
+		subject= new JTextField();
+		subject.setBounds(250, 238, 175, 25);		
+		currentGUIFrame.add(subject);
+		
+		lblNewLabel = new JLabel("Title");
+		lblNewLabel.setBounds(100, 270, 100, 20);
+		currentGUIFrame.add(lblNewLabel);
+		
+		subject= new JTextField();
+		subject.setBounds(250, 268, 175, 25);		
+		currentGUIFrame.add(subject);
+		
+		lblNewLabel = new JLabel("Days");
+		lblNewLabel.setBounds(100, 310, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
 		String	listData[] ={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 		JList listbox = new JList( listData );
-		listbox.setBounds(250, 178, 100, 75);
+		listbox.setBounds(250, 308, 100, 35);
+		currentGUIFrame.add(listbox);
+		
+		lblNewLabel = new JLabel("Semester *");
+		lblNewLabel.setBounds(100, 360, 100, 20);
+		currentGUIFrame.add(lblNewLabel);
+		
+		String semesterData[] ={"Spring","Fall"};
+		listbox = new JList( semesterData );
+		listbox.setBounds(250, 358, 100, 35);
 		currentGUIFrame.add(listbox);
 		
 		addNewProfessor = new JButton("Save");
@@ -147,7 +188,7 @@ public class AddProfessorPanel  extends JPanel {
 				
 			}
 		});
-		addNewProfessor.setBounds(300, 275, 125, 30);
+		addNewProfessor.setBounds(300, 400, 125, 30);
 		currentGUIFrame.add(addNewProfessor);
 		
 		back = new JButton("Back");
@@ -158,7 +199,7 @@ public class AddProfessorPanel  extends JPanel {
 				currentGUIFrame.getContentPane().repaint();
 			}
 		});
-		back.setBounds(100, 275, 125, 30);
+		back.setBounds(100, 400, 125, 30);
 		currentGUIFrame.add(back);
 	}
 }

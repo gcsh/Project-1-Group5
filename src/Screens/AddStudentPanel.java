@@ -19,7 +19,7 @@ public class AddStudentPanel extends JPanel {
 	public AddStudentPanel(final JFrame currentGUIFrame) {
 		setLayout(null);		
 		JLabel lblNewLabel = new JLabel("Welcome User");
-		lblNewLabel.setBounds(325, 10, 100, 20);
+		lblNewLabel.setBounds(425, 10, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		logout = new JButton("Logout");
 		logout.addActionListener(new ActionListener() {
@@ -29,10 +29,10 @@ public class AddStudentPanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();	
 			}
 		});
-		logout.setBounds(425, 7, 75, 30);
+		logout.setBounds(525, 7, 75, 30);
 		currentGUIFrame.add(logout);
 		lblNewLabel = new JLabel("Add New Student");
-		lblNewLabel.setBounds(200, 90, 200, 20);
+		lblNewLabel.setBounds(250, 90, 200, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
 		professors = new JButton("Professors");
@@ -113,7 +113,7 @@ public class AddStudentPanel extends JPanel {
 		reports.setBounds(520, 55, 85, 30);
 		currentGUIFrame.add(reports);
 		
-		lblNewLabel = new JLabel("Student Name *");
+		lblNewLabel = new JLabel("Student Name");
 		lblNewLabel.setBounds(100, 120, 110, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
@@ -121,7 +121,7 @@ public class AddStudentPanel extends JPanel {
 		textField.setBounds(250, 118, 175, 25);
 		currentGUIFrame.add(textField);	
 		
-		lblNewLabel = new JLabel("Student ID *");
+		lblNewLabel = new JLabel("Student ID");
 		lblNewLabel.setBounds(100, 150, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
@@ -129,7 +129,7 @@ public class AddStudentPanel extends JPanel {
 		subject.setBounds(250, 148, 175, 25);		
 		currentGUIFrame.add(subject);
 		
-		lblNewLabel = new JLabel("Subject *");
+		lblNewLabel = new JLabel("Subject");
 		lblNewLabel.setBounds(100, 180, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
@@ -137,7 +137,7 @@ public class AddStudentPanel extends JPanel {
 		subject.setBounds(250, 178, 175, 25);
 		currentGUIFrame.add(subject);
 		
-		lblNewLabel = new JLabel("Grade *");
+		lblNewLabel = new JLabel("Grade");
 		lblNewLabel.setBounds(100, 210, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
@@ -145,7 +145,7 @@ public class AddStudentPanel extends JPanel {
 		subject.setBounds(250, 208, 175, 25);
 		currentGUIFrame.add(subject);
 		
-		lblNewLabel = new JLabel("Semester *");
+		lblNewLabel = new JLabel("Semester");
 		lblNewLabel.setBounds(100, 240, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
