@@ -19,7 +19,7 @@ public class StudentsPanel extends JPanel {
 	public StudentsPanel(final JFrame currentGUIFrame) {
 		setLayout(null);		
 		JLabel lblNewLabel = new JLabel("Welcome User");
-		lblNewLabel.setBounds(325, 10, 100, 20);
+		lblNewLabel.setBounds(425, 10, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		logout = new JButton("Logout");
 		logout.addActionListener(new ActionListener() {
@@ -29,10 +29,10 @@ public class StudentsPanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();	
 			}
 		});
-		logout.setBounds(425, 7, 75, 30);
+		logout.setBounds(525, 7, 75, 30);
 		currentGUIFrame.add(logout);
 		lblNewLabel = new JLabel("View Students");
-		lblNewLabel.setBounds(150, 30, 200, 20);
+		lblNewLabel.setBounds(250, 30, 200, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
 		professors = new JButton("Professors");
@@ -129,7 +129,7 @@ public class StudentsPanel extends JPanel {
 		Object columnNames[] = { "Student Name", "Student ID", "Subject", "Grade","Semester","Edit", "Delete"};
 		JTable table = new JTable(rowData, columnNames);
 		JScrollPane scroll = new JScrollPane(table);
-		scroll.setBounds(10, 150, 500, 300);
+		scroll.setBounds(10, 150, 600, 300);
 		currentGUIFrame.add(scroll);
 	}
 }
