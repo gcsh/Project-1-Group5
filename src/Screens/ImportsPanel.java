@@ -19,7 +19,7 @@ public class ImportsPanel extends JPanel {
 	public ImportsPanel(final JFrame currentGUIFrame) {
 		setLayout(null);		
 		JLabel lblNewLabel = new JLabel("Welcome User");
-		lblNewLabel.setBounds(325, 10, 100, 20);
+		lblNewLabel.setBounds(425, 10, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		logout = new JButton("Logout");
 		logout.addActionListener(new ActionListener() {
@@ -29,10 +29,10 @@ public class ImportsPanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();	
 			}
 		});
-		logout.setBounds(425, 7, 75, 30);
+		logout.setBounds(525, 7, 75, 30);
 		currentGUIFrame.add(logout);
 		lblNewLabel = new JLabel("Import Files");
-		lblNewLabel.setBounds(150, 30, 200, 20);
+		lblNewLabel.setBounds(250, 30, 200, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
 		professors = new JButton("Professors");

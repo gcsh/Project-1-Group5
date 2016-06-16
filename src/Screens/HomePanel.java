@@ -7,30 +7,35 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import main.LoginHome;
 
 public class HomePanel extends JPanel {
 	private JButton logout;
-	private JButton professors,students,degrees,subjects,rooms,reports,importData,schedule;
+	private JButton professors,students,degrees,subjects,rooms,reports,importData,schedule,database;
 	public HomePanel(final JFrame currentGUIFrame) {
 		setLayout(null);		
 		JLabel lblNewLabel = new JLabel("Welcome User");
-		lblNewLabel.setBounds(325, 10, 100, 20);
+		lblNewLabel.setBounds(425, 10, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		logout = new JButton("Logout");
 		logout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				currentGUIFrame.getContentPane().removeAll();
-				currentGUIFrame.getContentPane().add(new LoginHome(currentGUIFrame));
-				currentGUIFrame.getContentPane().repaint();	
+				int dialogButton = JOptionPane.YES_NO_OPTION;
+				int result=JOptionPane.showConfirmDialog (null, "Do you want to logout with a button YES","Alert",dialogButton);
+                if(result==0){
+                	currentGUIFrame.getContentPane().removeAll();
+    				currentGUIFrame.getContentPane().add(new LoginHome(currentGUIFrame));
+    				currentGUIFrame.getContentPane().repaint();
+                }	
 			}
 		});
-		logout.setBounds(425, 7, 75, 30);
+		logout.setBounds(525, 7, 75, 30);
 		currentGUIFrame.add(logout);
 		lblNewLabel = new JLabel("Graduate School User Portal");
-		lblNewLabel.setBounds(150, 30, 200, 20);
+		lblNewLabel.setBounds(250, 75, 200, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
 		professors = new JButton("Professors");
@@ -41,7 +46,7 @@ public class HomePanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();
 			}
 		});
-		professors.setBounds(10, 55, 100, 30);
+		professors.setBounds(75, 100, 100, 30);
 		currentGUIFrame.add(professors);
 		
 		students = new JButton("Students");
@@ -52,7 +57,7 @@ public class HomePanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();
 			}
 		});
-		students.setBounds(95, 55, 90, 30);
+		students.setBounds(185, 100, 90, 30);
 		currentGUIFrame.add(students);
 		
 		degrees = new JButton("Degrees");
@@ -63,7 +68,7 @@ public class HomePanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();
 			}
 		});
-		degrees.setBounds(180, 55, 90, 30);
+		degrees.setBounds(285, 100, 90, 30);
 		currentGUIFrame.add(degrees);
 		
 		subjects = new JButton("Subjects");
@@ -74,7 +79,7 @@ public class HomePanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();
 			}
 		});
-		subjects.setBounds(265, 55, 90, 30);
+		subjects.setBounds(385, 100, 90, 30);
 		currentGUIFrame.add(subjects);
 		
 		rooms = new JButton("Semesters");
@@ -85,7 +90,7 @@ public class HomePanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();
 			}
 		});
-		rooms.setBounds(350, 55, 100, 30);
+		rooms.setBounds(485, 100, 100, 30);
 		currentGUIFrame.add(rooms);
 		
 		schedule = new JButton("Schedule");
@@ -96,7 +101,7 @@ public class HomePanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();
 			}
 		});
-		schedule.setBounds(435, 55, 90, 30);
+		schedule.setBounds(75, 150, 90, 30);
 		currentGUIFrame.add(schedule);
 		
 		reports = new JButton("Reports");
@@ -107,11 +112,20 @@ public class HomePanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();
 			}
 		});
-		reports.setBounds(520, 55, 85, 30);
+		reports.setBounds(185, 150, 85, 30);
 		currentGUIFrame.add(reports);
 		
+		database = new JButton("Database");
+		database.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(database, "Coming Soon !!!");
+			}
+		});
+		database.setBounds(285, 150, 100, 30);
+		currentGUIFrame.add(database);
+		
 		JLabel label = new JLabel();
-		label.setBounds(200, 85, 500, 200);
+		label.setBounds(20, 5, 200, 75);
 		label.setIcon(new ImageIcon(System.getProperty("user.dir")+"\\src\\Screens\\logo.jpg"));
         currentGUIFrame.add(label);
 	}

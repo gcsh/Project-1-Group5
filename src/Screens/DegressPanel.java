@@ -19,7 +19,7 @@ public class DegressPanel extends JPanel {
 	public DegressPanel(final JFrame currentGUIFrame) {
 		setLayout(null);		
 		JLabel lblNewLabel = new JLabel("Welcome User");
-		lblNewLabel.setBounds(325, 10, 100, 20);
+		lblNewLabel.setBounds(425, 10, 100, 20);
 		currentGUIFrame.add(lblNewLabel);
 		logout = new JButton("Logout");
 		logout.addActionListener(new ActionListener() {
@@ -29,10 +29,10 @@ public class DegressPanel extends JPanel {
 				currentGUIFrame.getContentPane().repaint();	
 			}
 		});
-		logout.setBounds(425, 7, 75, 30);
+		logout.setBounds(525, 7, 75, 30);
 		currentGUIFrame.add(logout);
 		lblNewLabel = new JLabel("View Degree Plans");
-		lblNewLabel.setBounds(150, 30, 200, 20);
+		lblNewLabel.setBounds(250, 30, 200, 20);
 		currentGUIFrame.add(lblNewLabel);
 		
 		professors = new JButton("Professors");
@@ -124,12 +124,12 @@ public class DegressPanel extends JPanel {
 		addNewDegreePlan.setBounds(10, 90, 175, 30);
 		currentGUIFrame.add(addNewDegreePlan);
 		
-		Object rowData[][] = { { "Row1-Column1", "Row1-Column2", "Row1-Column3", "Row1-Column4", "Edit", "Delete"},
-		                       { "Row2-Column1", "Row2-Column2", "Row2-Column3", "Row1-Column4", "Edit", "Delete"} };
-		Object columnNames[] = { "Degree Name", "Degree Code", "Department", "Track","Edit", "Delete"};
+		Object rowData[][] = { { "Row1-Column1", "Row1-Column2", "Row1-Column3", "Row1-Column4", "Row1-Column5", "Row1-Column6", "Edit", "Delete"},
+		                       { "Row2-Column1", "Row2-Column2", "Row2-Column3", "Row1-Column4", "Row1-Column5", "Row1-Column6",  "Edit", "Delete"} };
+		Object columnNames[] = { "Degree Code", "Degree Name", "Description", "Hours", "Type", "Courses", "Edit", "Delete"};
 		JTable table = new JTable(rowData, columnNames);
 		JScrollPane scroll = new JScrollPane(table);
-		scroll.setBounds(10, 150, 500, 300);
+		scroll.setBounds(10, 150, 600, 300);
 		currentGUIFrame.add(scroll);
 	}
 }
