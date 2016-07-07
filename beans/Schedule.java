@@ -11,6 +11,13 @@ public class Schedule {
 	private String waitList;
 	private String credits;
 	private String academicLevel;
+	private String occupancy;	
+	public String getOccupancy() {
+		return occupancy;
+	}
+	public void setOccupancy(String occupancy) {
+		this.occupancy = occupancy;
+	}
 	public String getTerm() {
 		return term;
 	}

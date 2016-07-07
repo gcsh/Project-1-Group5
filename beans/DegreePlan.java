@@ -6,6 +6,15 @@ public class DegreePlan {
 	private String hours;
 	private String type;
 	private String courses;
+	private String degreeName;
+	private String forecast;
+	private String gradSchool;
+	public String getGradSchool() {
+		return gradSchool;
+	}
+	public void setGradSchool(String gradSchool) {
+		this.gradSchool = gradSchool;
+	}
 	public String getDegreeCode() {
 		return degreeCode;
 	}
@@ -14,6 +23,18 @@ public class DegreePlan {
 	}
 	public String getDescription() {
 		return description;
+	}
+	public String getDegreeName() {
+		return degreeName;
+	}
+	public void setDegreeName(String degreeName) {
+		this.degreeName = degreeName;
+	}
+	public String getForecast() {
+		return forecast;
+	}
+	public void setForecast(String forecast) {
+		this.forecast = forecast;
 	}
 	public void setDescription(String description) {
 		this.description = description;
